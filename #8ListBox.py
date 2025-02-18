@@ -27,6 +27,9 @@ def add():
         listbox.insert(listbox.size(),entryBox.get().strip())  #strip() gunanya untuk menhilangkan baris baru didepan atau dibelakang
         listbox.config(height=listbox.size())
 
+def test():
+    if not listbox.curselection():
+        print("muka lu kayak konci")
 
 '''Fungsi untuk menghapus satu item'''
 # def delete():
@@ -71,5 +74,8 @@ addButon.pack()
 
 deleteButon = Button(window,text='delete',command=delete,width=15)
 deleteButon.pack()
+
+printButton = Button(window,text="test button",command=test)
+printButton.pack()
 
 window.mainloop() #agar program utama terus berjalan
